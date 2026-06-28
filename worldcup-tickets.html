@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup 2026 — Official² Ticket Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #060A14;
+      color: #F0F0F0;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: #0A0F1E;
+      border-bottom: 1px solid #1D2A40;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .logo-wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: #FFFFFF;
+      letter-spacing: 1px;
+    }
+
+    .logo-sup {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1DB954;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+    }
+
+    .nav-tab {
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #6B7A9A;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: 'Inter', sans-serif;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-tab:hover { color: #B0BCD4; background: #111827; }
+    .nav-tab.active { color: #1DB954; background: #0D1F0F; }
+
+    .header-badge {
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(255, 69, 0, 0.15);
+      color: #FF7040;
+      border: 1px solid rgba(255, 69, 0, 0.3);
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: #0A0F1E;
+      border-bottom: 1px solid #1D2A40;
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(29, 185, 84, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #1DB954;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 10vw, 96px);
+      line-height: 0.92;
+      color: #FFFFFF;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span { color: #1DB954; }
+
+    .hero-sub {
+      font-size: 16px;
+      color: #6B7A9A;
+      max-width: 480px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+
+    .hero-pill-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      background: #111827;
+      border: 1px solid #1D2A40;
+      color: #B0BCD4;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+    .hero-pill i { font-size: 14px; }
+    .hero-pill .pill-green { color: #1DB954; }
+    .hero-pill .pill-orange { color: #FF6B1A; }
+    .hero-pill .pill-gold { color: #F5C518; }
+
+    /* ── ALERT BANNER ── */
+    .alert-banner {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 0 24px;
+    }
+
+    .alert-inner {
+      background: #141E33;
+      border: 1px solid #F5C518;
+      border-radius: 10px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .alert-icon { color: #F5C518; font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+    .alert-text { font-size: 14px; color: #C8A830; line-height: 1.6; }
+    .alert-text strong { color: #F5C518; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 24px 60px;
+    }
+
+    /* panels */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── SECTION HEADER ── */
+    .section-header { margin-bottom: 24px; }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .section-sub { font-size: 14px; color: #6B7A9A; }
+
+    /* ── TICKET GRID ── */
+    .ticket-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    /* ── TICKET CARD ── */
+    .ticket-card {
+      background: #111827;
+      border-radius: 14px;
+      border: 1px solid #1D2A40;
+      overflow: hidden;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .ticket-card:hover {
+      border-color: #1DB954;
+      transform: translateY(-2px);
+    }
+
+    .hot-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #FF4500;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .ticket-header {
+      padding: 16px 18px 14px;
+      border-bottom: 2px dashed #1D2A40;
+      position: relative;
+    }
+
+    .ticket-notch {
+      position: absolute;
+      bottom: -9px;
+      width: 18px;
+      height: 18px;
+      background: #060A14;
+      border-radius: 50%;
+      border: 1px solid #1D2A40;
+    }
+    .ticket-notch.left { left: -9px; }
+    .ticket-notch.right { right: -9px; }
+
+    .match-stage {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .stage-group  { background: #0E2940; color: #5DAEE8; }
+    .stage-r16    { background: #1A1A0E; color: #C9A82A; }
+    .stage-qf     { background: #1F0A1A; color: #D46BA0; }
+    .stage-sf     { background: #0E2018; color: #1DB954; }
+    .stage-final  { background: #2A1500; color: #FF6B1A; }
+
+    .match-teams {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .match-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #6B7A9A;
+    }
+    .match-meta span { display: flex; align-items: center; gap: 4px; }
+
+    .ticket-body { padding: 14px 18px 18px; }
+
+    .tier-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .tier-chip {
+      flex: 1;
+      min-width: 90px;
+      background: #0A0F1E;
+      border: 1px solid #1D2A40;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .tier-chip-name { font-size: 11px; color: #6B7A9A; font-weight: 500; margin-bottom: 4px; }
+    .tier-chip-real { font-size: 11px; color: #3A4A5A; text-decoration: line-through; margin-bottom: 2px; }
+    .tier-chip-you  { font-size: 10px; color: #5B6A7A; margin-bottom: 1px; }
+
+    .tier-chip-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: #1DB954;
+    }
+
+    .x2-tag {
+      display: inline-block;
+      background: #FF4500;
+      color: #FFF;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      letter-spacing: 0.5px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    .buy-btn {
+      width: 100%;
+      padding: 11px;
+      background: #1DB954;
+      color: #050D08;
+      border: none;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .buy-btn:hover { background: #17A348; }
+    .buy-btn:active { transform: scale(0.98); }
+
+    /* ── STANDINGS ── */
+    .standings-wrap {
+      background: #111827;
+      border: 1px solid #1D2A40;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .standings-group-label {
+      padding: 14px 20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      background: #0A0F1E;
+      border-bottom: 1px solid #1D2A40;
+      letter-spacing: 0.5px;
+    }
+
+    .standings-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .standings-table th {
+      padding: 10px 16px;
+      text-align: left;
+      color: #6B7A9A;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #1D2A40;
+    }
+    .standings-table th.num { text-align: center; }
+
+    .standings-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #0D1525;
+      color: #C0CDE0;
+    }
+    .standings-table td.num { text-align: center; }
+    .standings-table tr:last-child td { border-bottom: none; }
+    .standings-table tr:hover td { background: #0D1525; }
+
+    .team-cell { display: flex; align-items: center; gap: 10px; }
+    .team-flag { font-size: 22px; }
+    .team-name { font-weight: 500; }
+    .team-pos {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .pos-1 { background: #2A1500; color: #FF6B1A; }
+    .pos-2 { background: #0E2940; color: #5DAEE8; }
+    .pos-3 { background: #1A1A0E; color: #888; }
+    .pos-4 { background: #1F0A0A; color: #555; }
+
+    .pts-cell {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #1DB954;
+      text-align: center;
+    }
+
+    .standings-note {
+      background: #060A14;
+      border-top: 1px solid #1D2A40;
+      padding: 12px 20px;
+      font-size: 12px;
+      color: #3A4A6A;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+
+    .faq-item {
+      background: #111827;
+      border: 1px solid #1D2A40;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover { border-color: #2A3A5A; }
+
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #C0CDE0;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      text-align: left;
+      gap: 12px;
+    }
+    .faq-q i { color: #6B7A9A; font-size: 16px; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+
+    .faq-a {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: 14px;
+      color: #6B7A9A;
+      line-height: 1.7;
+      border-top: 1px solid #1D2A40;
+      margin-top: 0;
+      padding-top: 14px;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+
+    .modal-box {
+      background: #111827;
+      border: 1px solid #1D2A40;
+      border-radius: 16px;
+      width: 400px;
+      max-width: 100%;
+      overflow: hidden;
+      animation: modalIn 0.22s ease;
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(24px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .modal-head {
+      background: #0A0F1E;
+      padding: 20px 24px;
+      border-bottom: 1px solid #1D2A40;
+    }
+
+    .modal-head-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #1DB954;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .modal-match {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      color: #FFF;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .modal-venue { font-size: 13px; color: #6B7A9A; }
+
+    .modal-body { padding: 24px; }
+
+    .modal-tier-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #6B7A9A;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .modal-tier {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      background: #0A0F1E;
+      border: 1px solid #1D2A40;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .modal-tier:hover { border-color: #2A4A3A; }
+    .modal-tier.selected { border-color: #1DB954; background: #0D1F0F; }
+
+    .modal-tier-left .t-name { font-size: 14px; font-weight: 500; color: #E0E8F5; margin-bottom: 3px; }
+    .modal-tier-left .t-real { font-size: 12px; color: #3A4A5A; text-decoration: line-through; }
+
+    .modal-tier-right { text-align: right; }
+    .modal-tier-right .t-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: #1DB954;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .modal-tier-right .t-markup { font-size: 11px; color: #FF4500; font-weight: 600; }
+
+    .modal-notice {
+      background: #1A1200;
+      border: 1px solid #3A2800;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #9A7A30;
+      margin: 14px 0;
+      line-height: 1.6;
+      display: flex;
+      gap: 8px;
+    }
+    .modal-notice i { color: #F5C518; flex-shrink: 0; margin-top: 1px; }
+
+    .modal-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 14px 0 10px;
+      border-top: 1px solid #1D2A40;
+    }
+    .modal-total-label { font-size: 14px; color: #6B7A9A; }
+    .modal-total-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 34px;
+      color: #F5C518;
+    }
+
+    .modal-cta {
+      width: 100%;
+      padding: 13px;
+      background: #FF4500;
+      color: #FFF;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      transition: background 0.2s, transform 0.1s;
+      margin-bottom: 8px;
+    }
+    .modal-cta:hover { background: #E03D00; }
+    .modal-cta:active { transform: scale(0.98); }
+
+    .modal-cancel {
+      width: 100%;
+      padding: 10px;
+      background: none;
+      border: 1px solid #1D2A40;
+      color: #6B7A9A;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .modal-cancel:hover { border-color: #6B7A9A; color: #B0BCD4; }
+
+    /* ── CONFIRMED SCREEN ── */
+    .confirmed-screen { display: none; padding: 36px 28px; text-align: center; }
+
+    .confirmed-icon {
+      font-size: 52px;
+      color: #1DB954;
+      margin-bottom: 14px;
+    }
+
+    .confirmed-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #FFF;
+      margin-bottom: 8px;
+    }
+
+    .confirmed-sub {
+      font-size: 14px;
+      color: #6B7A9A;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .receipt {
+      background: #0A0F1E;
+      border: 2px dashed #2A3A5A;
+      border-radius: 10px;
+      padding: 16px 18px;
+      text-align: left;
+      font-size: 13px;
+      color: #6B7A9A;
+      margin-bottom: 20px;
+    }
+
+    .receipt-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #0D1525;
+    }
+    .receipt-row:last-child { border-bottom: none; }
+    .receipt-row span:last-child { color: #C0CDE0; }
+    .receipt-row.total-row { border-top: 1px solid #2A3A5A; padding-top: 10px; margin-top: 4px; }
+    .receipt-row.total-row span:last-child {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #F5C518;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid #1D2A40;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-left { font-size: 12px; color: #2A3A5A; }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #3A4A6A;
+    }
+    .footer-right i { color: #1DB954; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .header-badge { display: none; }
+      .hero { padding: 36px 16px 32px; }
+      .main { padding: 28px 16px 48px; }
+      .ticket-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <div class="logo-wordmark">WC 2026</div>
+        <div class="logo-sup">Official²</div>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-tab active" onclick="switchTab('matches')">
+          <i class="ti ti-ticket"></i> Matches
+        </button>
+        <button class="nav-tab" onclick="switchTab('standings')">
+          <i class="ti ti-table"></i> Standings
+        </button>
+        <button class="nav-tab" onclick="switchTab('faq')">
+          <i class="ti ti-help"></i> Pricing FAQ
+        </button>
+      </nav>
+      <div class="header-badge">2× Markup · Always</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow"><i class="ti ti-trophy"></i> Official² Ticket Partner · USA · Canada · Mexico</div>
+    <div class="hero-title">World Cup<br><span>2026</span></div>
+    <div class="hero-sub">Real tickets. Real matches. Honest prices — which are, to be transparent, exactly double what you should be paying.</div>
+    <div class="hero-pill-row">
+      <div class="hero-pill"><i class="ti ti-shield-check pill-green"></i> 100% Authentic Tickets</div>
+      <div class="hero-pill"><i class="ti ti-trending-up pill-orange"></i> 200% of Face Value</div>
+      <div class="hero-pill"><i class="ti ti-star pill-gold"></i> Totally Unnecessary Markup</div>
+    </div>
+  </section>
+
+  <!-- ALERT -->
+  <div class="alert-banner">
+    <div class="alert-inner">
+      <i class="ti ti-alert-triangle alert-icon"></i>
+      <div class="alert-text">
+        <strong>Mandatory disclosure:</strong> All tickets on this site are priced at <strong>exactly 2× the official face value.</strong>
+        We are fully transparent about this. There are no hidden fees — just one very obvious and large one, right there in the headline.
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- MATCHES PANEL -->
+    <div id="panel-matches" class="tab-panel active">
+      <div class="section-header">
+        <div class="section-title">Available Matches</div>
+        <div class="section-sub">6 matches · Click any match to pick your seat tier and confirm your overpriced purchase</div>
+      </div>
+      <div class="ticket-grid" id="ticket-grid"></div>
+    </div>
+
+    <!-- STANDINGS PANEL -->
+    <div id="panel-standings" class="tab-panel">
+      <div class="section-header">
+        <div class="section-title">Group Stage Standings</div>
+        <div class="section-sub">The further your team advances, the more we charge you. Obviously.</div>
+      </div>
+
+      <div class="standings-wrap">
+        <div class="standings-group-label">Group A</div>
+        <table class="standings-table" aria-label="Group A standings">
+          <thead>
+            <tr>
+              <th style="width:36px"></th>
+              <th>Team</th>
+              <th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th>
+              <th class="num">GD</th><th class="num">Pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="team-pos pos-1">1</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇧🇷</span><span class="team-name">Brazil</span></div></td>
+              <td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num">0</td>
+              <td class="num">+7</td><td class="pts-cell">9</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-2">2</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇦🇷</span><span class="team-name">Argentina</span></div></td>
+              <td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num">1</td>
+              <td class="num">+3</td><td class="pts-cell">6</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-3">3</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇩🇪</span><span class="team-name">Germany</span></div></td>
+              <td class="num">3</td><td class="num">1</td><td class="num">0</td><td class="num">2</td>
+              <td class="num">−2</td><td class="pts-cell">3</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-4">4</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇸🇦</span><span class="team-name">Saudi Arabia</span></div></td>
+              <td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">3</td>
+              <td class="num">−8</td><td class="pts-cell">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="standings-note">
+          <i class="ti ti-info-circle"></i>
+          Standings are illustrative. Prices update as teams advance — double markup applies at every single round.
+        </div>
+      </div>
+
+      <div class="standings-wrap">
+        <div class="standings-group-label">Group B</div>
+        <table class="standings-table" aria-label="Group B standings">
+          <thead>
+            <tr>
+              <th style="width:36px"></th>
+              <th>Team</th>
+              <th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th>
+              <th class="num">GD</th><th class="num">Pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="team-pos pos-1">1</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇫🇷</span><span class="team-name">France</span></div></td>
+              <td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num">0</td>
+              <td class="num">+5</td><td class="pts-cell">7</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-2">2</div></td>
+              <td><div class="team-cell"><span class="team-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="team-name">England</span></div></td>
+              <td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num">1</td>
+              <td class="num">+2</td><td class="pts-cell">6</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-3">3</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇪🇸</span><span class="team-name">Spain</span></div></td>
+              <td class="num">3</td><td class="num">1</td><td class="num">1</td><td class="num">1</td>
+              <td class="num">+1</td><td class="pts-cell">4</td>
+            </tr>
+            <tr>
+              <td><div class="team-pos pos-4">4</div></td>
+              <td><div class="team-cell"><span class="team-flag">🇯🇵</span><span class="team-name">Japan</span></div></td>
+              <td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">3</td>
+              <td class="num">−8</td><td class="pts-cell">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FAQ PANEL -->
+    <div id="panel-faq" class="tab-panel">
+      <div class="section-header">
+        <div class="section-title">Frequently Asked Questions</div>
+        <div class="section-sub">All your questions about our pricing, answered with disarming honesty</div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Why are tickets double the price?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">Great question. It's our business model. We appreciate your understanding and your money.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Are these official FIFA tickets?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">They are completely real tickets to real matches at real stadiums. We simply charge twice as much for them. "Official²" means doubly official, which is not an officially recognized distinction, but we stand by it.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I get a refund if I find cheaper tickets elsewhere?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">Yes — you will definitely find them cheaper elsewhere. This is 100% guaranteed, because everywhere else sells them at the actual face value. Refunds, however, are not available. We respect your decision-making.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Why are you telling me this upfront?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">Radical transparency is our core brand value. We are genuinely proud of charging you twice the fair market price and we feel it is only right that you know this before you hand over your card details.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is this legal?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">Probably! We are not lawyers. But we are very upfront about the markup, which counts for something in most jurisdictions, we think. Maybe.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Are there any hidden fees on top of the double price?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">Absolutely not. We only charge you double. There are no mysterious "service fees", no "booking charges", and no "convenience surcharges." Just one clean, obvious, fully-disclosed 100% premium. You're welcome.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do you offer group discounts?
+            <i class="ti ti-chevron-down"></i>
+          </button>
+          <div class="faq-a">No. In fact, buying more tickets means spending more money, which we encourage wholeheartedly. There are also no loyalty rewards, no referral bonuses, and no early-bird pricing. Double. Always double.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© 2026 Official² Ticket Partner · Not affiliated with FIFA · Prices are exactly double · Always</div>
+    <div class="footer-right">
+      <i class="ti ti-shield-check"></i>
+      100% Authentic · 200% Price · 0% Shame
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="closeOnBg(event)" aria-modal="true" role="dialog" aria-label="Buy tickets">
+    <div class="modal-box">
+
+      <div id="modal-purchase">
+        <div class="modal-head">
+          <div class="modal-head-eyebrow"><i class="ti ti-ticket"></i> Select your seat tier</div>
+          <div class="modal-match" id="modal-match-name"></div>
+          <div class="modal-venue" id="modal-venue"></div>
+        </div>
+        <div class="modal-body">
+          <div class="modal-tier-label">Ticket tier</div>
+          <div id="tier-list"></div>
+          <div class="modal-notice">
+            <i class="ti ti-info-circle"></i>
+            <span>All prices shown are <strong style="color:#C9A82A;">2× the official face value.</strong> You are fully informed. We respect that. Thank you for proceeding anyway.</span>
+          </div>
+          <div class="modal-total">
+            <span class="modal-total-label">Total you pay</span>
+            <span class="modal-total-price" id="modal-total">$0</span>
+          </div>
+          <button class="modal-cta" onclick="confirmPurchase()">
+            <i class="ti ti-lock"></i> Confirm & Pay Double
+          </button>
+          <button class="modal-cancel" onclick="closeModal()">Actually, I'll find a better deal</button>
+        </div>
+      </div>
+
+      <div class="confirmed-screen" id="confirmed-screen">
+        <div class="confirmed-icon"><i class="ti ti-circle-check"></i></div>
+        <div class="confirmed-title">You did it.</div>
+        <div class="confirmed-sub">Your tickets are confirmed. You paid double the face value. We salute your dedication to the beautiful game — and to our quarterly earnings.</div>
+        <div class="receipt" id="receipt"></div>
+        <button class="modal-cancel" onclick="closeModal()">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const matches = [
+      {
+        teams: "Brazil vs Argentina",
+        venue: "MetLife Stadium",
+        date: "14 Jun", time: "18:00",
+        stageLabel: "Group Stage", stageClass: "stage-group",
+        hot: true,
+        tiers: [
+          { name: "General Admission",   emoji: "🟢", real: 150 },
+          { name: "Category 2",          emoji: "🔵", real: 350 },
+          { name: "Premium Seat",        emoji: "⭐", real: 650 },
+        ]
+      },
+      {
+        teams: "France vs Spain",
+        venue: "Rose Bowl, Los Angeles",
+        date: "16 Jun", time: "20:00",
+        stageLabel: "Group Stage", stageClass: "stage-group",
+        hot: false,
+        tiers: [
+          { name: "General Admission",   emoji: "🟢", real: 120 },
+          { name: "Category 2",          emoji: "🔵", real: 300 },
+          { name: "VIP Hospitality",     emoji: "⭐", real: 900 },
+        ]
+      },
+      {
+        teams: "England vs Portugal",
+        venue: "SoFi Stadium, LA",
+        date: "18 Jun", time: "21:00",
+        stageLabel: "Round of 16", stageClass: "stage-r16",
+        hot: true,
+        tiers: [
+          { name: "General Admission",   emoji: "🟢", real: 200 },
+          { name: "Category 2",          emoji: "🔵", real: 500 },
+        ]
+      },
+      {
+        teams: "Germany vs Morocco",
+        venue: "AT&T Stadium, Dallas",
+        date: "20 Jun", time: "19:00",
+        stageLabel: "Quarter-Final", stageClass: "stage-qf",
+        hot: false,
+        tiers: [
+          { name: "Category 3",          emoji: "🟢", real: 280 },
+          { name: "Category 1",          emoji: "⭐", real: 600 },
+        ]
+      },
+      {
+        teams: "Semi-Final 1",
+        venue: "MetLife Stadium",
+        date: "3 Jul", time: "20:00",
+        stageLabel: "Semi-Final", stageClass: "stage-sf",
+        hot: false,
+        tiers: [
+          { name: "Category 3",          emoji: "🟢", real: 350 },
+          { name: "Premium",             emoji: "⭐", real: 850 },
+        ]
+      },
+      {
+        teams: "The Grand Final",
+        venue: "MetLife Stadium",
+        date: "19 Jul", time: "18:00",
+        stageLabel: "World Cup Final", stageClass: "stage-final",
+        hot: true,
+        tiers: [
+          { name: "Category 3",                  emoji: "🟢", real: 500  },
+          { name: "Category 2",                  emoji: "🔵", real: 900  },
+          { name: "Category 1 — Best Seats",     emoji: "⭐", real: 2000 },
+        ]
+      }
+    ];
+
+    let currentMatchIdx = 0;
+    let selectedTierIdx = 0;
+
+    /* ── Build ticket grid ── */
+    function renderGrid() {
+      const grid = document.getElementById('ticket-grid');
+      grid.innerHTML = matches.map((m, i) => `
+        <article class="ticket-card" aria-label="${m.teams} ticket">
+          ${m.hot ? '<div class="hot-badge">🔥 Hot</div>' : ''}
+          <div class="ticket-header">
+            <div class="match-stage ${m.stageClass}">${m.stageLabel}</div>
+            <div class="match-teams">${m.teams}</div>
+            <div class="match-meta">
+              <span><i class="ti ti-map-pin" aria-hidden="true"></i>${m.venue}</span>
+              <span><i class="ti ti-calendar" aria-hidden="true"></i>${m.date} · ${m.time}</span>
+            </div>
+            <div class="ticket-notch left" aria-hidden="true"></div>
+            <div class="ticket-notch right" aria-hidden="true"></div>
+          </div>
+          <div class="ticket-body">
+            <div class="tier-row">
+              ${m.tiers.map(t => `
+                <div class="tier-chip">
+                  <div class="tier-chip-name">${t.emoji} ${t.name}</div>
+                  <div class="tier-chip-real">$${t.real}</div>
+                  <div class="tier-chip-you">You pay:</div>
+                  <div class="tier-chip-price">$${t.real * 2}<span class="x2-tag">2×</span></div>
+                </div>
+              `).join('')}
+            </div>
+            <button class="buy-btn" onclick="openModal(${i})">
+              <i class="ti ti-ticket" aria-hidden="true"></i>
+              Get Tickets (At Double Price)
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    /* ── Modal ── */
+    function openModal(idx) {
+      currentMatchIdx = idx;
+      selectedTierIdx = 0;
+      const m = matches[idx];
+      document.getElementById('modal-match-name').textContent = m.teams;
+      document.getElementById('modal-venue').textContent = `${m.venue} · ${m.date} · ${m.time}`;
+      renderTiers();
+      updateTotal();
+      document.getElementById('confirmed-screen').style.display = 'none';
+      document.getElementById('modal-purchase').style.display = 'block';
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderTiers() {
+      const m = matches[currentMatchIdx];
+      document.getElementById('tier-list').innerHTML = m.tiers.map((t, i) => `
+        <div class="modal-tier ${i === selectedTierIdx ? 'selected' : ''}" onclick="selectTier(${i})" role="radio" aria-checked="${i === selectedTierIdx}" tabindex="0">
+          <div class="modal-tier-left">
+            <div class="t-name">${t.emoji} ${t.name}</div>
+            <div class="t-real">Face value: $${t.real}</div>
+          </div>
+          <div class="modal-tier-right">
+            <div class="t-price">$${t.real * 2}</div>
+            <div class="t-markup">× 2 markup</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function selectTier(i) {
+      selectedTierIdx = i;
+      renderTiers();
+      updateTotal();
+    }
+
+    function updateTotal() {
+      const t = matches[currentMatchIdx].tiers[selectedTierIdx];
+      document.getElementById('modal-total').textContent = `$${t.real * 2}`;
+    }
+
+    function confirmPurchase() {
+      const m = matches[currentMatchIdx];
+      const t = m.tiers[selectedTierIdx];
+      document.getElementById('receipt').innerHTML = `
+        <div class="receipt-row"><span>Match</span><span>${m.teams}</span></div>
+        <div class="receipt-row"><span>Venue</span><span>${m.venue}</span></div>
+        <div class="receipt-row"><span>Date</span><span>${m.date} · ${m.time}</span></div>
+        <div class="receipt-row"><span>Tier</span><span>${t.name}</span></div>
+        <div class="receipt-row"><span>Official face value</span><span>$${t.real}</span></div>
+        <div class="receipt-row"><span>Our honest markup</span><span style="color:#FF4500;">+$${t.real} (+100%)</span></div>
+        <div class="receipt-row total-row"><span>Total charged</span><span>$${t.real * 2}</span></div>
+      `;
+      document.getElementById('modal-purchase').style.display = 'none';
+      document.getElementById('confirmed-screen').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeOnBg(e) {
+      if (e.target === document.getElementById('modal')) closeModal();
+    }
+
+    /* ── Tabs ── */
+    function switchTab(tab) {
+      const tabs = ['matches', 'standings', 'faq'];
+      document.querySelectorAll('.nav-tab').forEach((btn, i) => {
+        btn.classList.toggle('active', tabs[i] === tab);
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    /* ── FAQ accordion ── */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    /* ── Keyboard: close modal on Escape ── */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ── Init ── */
+    renderGrid();
+  </script>
+</body>
+</html>
